@@ -1,41 +1,41 @@
 export const fetchPaintings = () => {
     return(dispatch) => {
-      return fetch('http://localhost:3000/pets')
+      return fetch('http://localhost:3000/paintings')
       .then(resp => resp.json())
-      .then(pets => {
-        dispatch({ type: "SET_PETS", payload: pets })
+      .then(paintings => {
+        dispatch({ type: "SET_PAINTINGS", payload: paintings })
       })
     }
   }
   
   
-  export const addPainting = pet => {
+  export const addPainting = painting => {
     return(dispatch) => {
-      return fetch('http://localhost:3000/pets', {
+      return fetch('http://localhost:3000/paintings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({pet:pet})
+        body: JSON.stringify({painting:painting})
       })
       .then(resp => resp.json())
-      .then(pet => {
-        dispatch({ type: "ADD_PET", payload: pet })
+      .then(painting => {
+        dispatch({ type: "ADD_PAINTING", payload: painting })
       })
     } 
   }
   
-  export const removePainting = petId => {
+  export const removePainting = paintingId => {
     return(dispatch) => {
-      return fetch(`http://localhost:3000/pets/${petId}`, {
+      return fetch(`http://localhost:3000/paintings/${paintingId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
         }
       })
       .then(resp => resp.json())
-      .then(pet => {
-        dispatch({ type: "REMOVE_PET", payload: petId })
+      .then(painting => {
+        dispatch({ type: "REMOVE_PAINTING", payload: paintingId })
       })
     } 
   }
