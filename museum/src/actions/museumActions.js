@@ -8,6 +8,7 @@ export const fetchMuseums = () => {
     }
   }
   //check for bugs
+  //add  thunk loading
   
   export const addMuseum = museum => {
     return(dispatch) => {

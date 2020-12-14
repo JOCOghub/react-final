@@ -7,7 +7,7 @@ export const fetchPaintings = () => {
       })
     }
   }
-  
+  //add  thunk loading
   
   export const addPainting = painting => {
     return(dispatch) => {
