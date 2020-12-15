@@ -7,7 +7,7 @@ class MuseumsContainer extends Component {
   render() {
     return (
       <div>
-        <MuseumInput addMuseum={this.props.addMuseum}/>
+        Add Museum<MuseumInput addMuseum={this.props.addMuseum}/>
         <Museums
           museums={this.props.museums}
           deleteMuseum={this.props.deleteMuseum}
