@@ -8,8 +8,10 @@ export class NavBar extends Component {
         <div className="container">
           {/* <NavLink to="/" className="brand-logo">Menu</NavLink> */}
           <ul className="right">
-            <li><NavLink to="/museums">Museums</NavLink></li>
-            <li><NavLink to="/paintings">Paintings</NavLink></li>
+            <li><NavLink to="/">Home Page</NavLink></li>
+            <li><NavLink to="/museums/new">Create New Museum</NavLink></li>
+            <li><NavLink to="/museums">All museums</NavLink></li>
+            {/* <li><NavLink to="/museums/:id">idk</NavLink></li> */}
           </ul>
         </div>
       </nav>
