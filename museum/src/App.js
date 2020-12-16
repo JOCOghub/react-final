@@ -1,40 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
-import MuseumsContainer from './containers/MuseumsContainer';
-import PaintingsContainer from './containers/PaintingsContainer';
+import MuseumNew from './containers/MuseumNew';
 import NavBar from './components/NavBar';
+import MuseumList from './containers/MuseumList';
+import MuseumShow from './containers/MuseumShow';
 
+class App extends Component {
 
-//class App extends Component {
-  // render() {
-  //   return (
-  //     <div className="App">
-  //         Welcome to the Museum Homepage!
-  //     </div>
-  //   );
+  constructor() {
+    super();
+
+    // this.state = {
+    // id: 0,
+    //  museums: []
+    // }
+  }
+
+  // addMuseum = museum => {
+  //   museum.id = this.state.id + 1;
+
+  //   this.setState({
+  //   museums: [...this.state.museums, museum],
+  //   id: this.state.id + 1
+  //   });
   // }
-  //how do I add text below
-  //
-  
-  function App() {
+
+  render() {
     return (
-      <div>
-        <h1 className="header" >Welcome to the Museum Menu!</h1>
-        <Router>
-        <NavBar />
+      <Router>
+      <NavBar />
         <div className="container">
           <Switch>
-            <Route path="/museums" component={MuseumsContainer} />
-            <Route path="/paintings" component={PaintingsContainer} />
+            <Route exact path="/" component={ Home } />
+            <Route exact path="/museums/new" component={MuseumNew} />
+            <Route exact path="/museums" component={MuseumList} />
+            <Route exact path="/museums/:id" render={ props => <MuseumShow {...props} museums={ this.state.museums } />} />
           </Switch>
         </div>
-        </Router>
-      </div>
-    )
+      </Router>
+    );
   }
-  
-  export default App
-  
-  
- // https://previews.123rf.com/images/castecodesign/castecodesign1607/castecodesign160700853/59487703-vector-beautiful-museum-urban-building-landscape-in-watercolor-hand-drawn-painting.jpg
+}
+
+export default App;
