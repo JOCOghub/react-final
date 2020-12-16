@@ -1,4 +1,4 @@
-export default(state=[], action) => {
+const paintingReducer = (state=[], action) => {
 
     switch(action.type){
       case "SET_PAINTINGS":
@@ -12,3 +12,4 @@ export default(state=[], action) => {
         return state
     }
   }
+  export default paintingReducer;

@@ -1,32 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './containers/Home';
 import MuseumNew from './containers/MuseumNew';
 import NavBar from './components/NavBar';
 import MuseumList from './containers/MuseumList';
-import MuseumShow from './containers/MuseumShow';
+// import MuseumShow from './containers/MuseumShow';
 
-class App extends Component {
 
-  constructor() {
-    super();
-
-    // this.state = {
-    // id: 0,
-    //  museums: []
-    // }
-  }
-
-  // addMuseum = museum => {
-  //   museum.id = this.state.id + 1;
-
-  //   this.setState({
-  //   museums: [...this.state.museums, museum],
-  //   id: this.state.id + 1
-  //   });
-  // }
-
-  render() {
+  function App() {
     return (
       <Router>
       <NavBar />
@@ -42,6 +23,23 @@ class App extends Component {
       </Router>
     );
   }
-}
+    
+  export default App;
+ 
+  // constructor() {
+  //   super();
 
-export default App;
+  //   // this.state = {
+  //   // id: 0,
+  //   //  museums: []
+  //   // }
+  // }
+
+  // addMuseum = museum => {
+  //   museum.id = this.state.id + 1;
+
+  //   this.setState({
+  //   museums: [...this.state.museums, museum],
+  //   id: this.state.id + 1
+  //   });
+  // }

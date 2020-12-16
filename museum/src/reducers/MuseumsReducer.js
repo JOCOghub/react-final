@@ -1,4 +1,4 @@
-export default(state=[], action) => {
+const museumReducer = (state=[], action) => {
 
     switch(action.type){
       case "SET_MUSEUMS":
@@ -12,3 +12,5 @@ export default(state=[], action) => {
         return state
     }
   }
+
+  export default museumReducer;

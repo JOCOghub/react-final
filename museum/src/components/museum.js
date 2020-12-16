@@ -6,7 +6,7 @@ const Museum = ({ museum, removeMuseum }) => {
     return (
     <li className="collection-item">
       museum Name: {museum.name}
-      <button onClick={()=>removeMuseum(museum.id)}>Remove museum?</button>
+      <button onClick={()=>removeMuseum(museum.id)}>Delete museum?</button>
     </li>
     );
 }
