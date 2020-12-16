@@ -30,7 +30,7 @@ class App extends Component {
       <Router>
       <NavBar />
         <div className="container">
-          <h1>Welcome to the Museum Menu!</h1>
+          <h1 className="header"> Welcome to the Museum Menu!</h1>
           <Switch>
             <Route exact path="/" component={ Home } />
             <Route exact path="/museums/new" component={MuseumNew} />
