@@ -8,7 +8,7 @@ const Museum = ({ museum, removeMuseum }) => {
     <li className="collection-item">
         {museum.name}
       <button onClick={()=>removeMuseum(museum.id)}>Delete</button>
-      <div><Link to={`/museums/${museum.id}`}>See or add Museum's Exhibits</Link></div> ------------------------------Pass props from here 
+      <div><Link to={`/museums/${museum.id}`}>See or add Museum's Exhibits</Link></div> ------------------------------
       <br/>    
     </li>
     );
