@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-export class MuseumShow extends Component {
-  constructor(props) {
+  class MuseumShow extends Component { //had an export at the beggining of this line b4
+    constructor(props) {
     super(props);
 
     let paramsId = parseInt(this.props.match.params.id, 10)

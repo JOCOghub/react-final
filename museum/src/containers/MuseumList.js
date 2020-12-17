@@ -3,7 +3,6 @@ import Museum from '../components/museum'
 import { connect } from 'react-redux'
 import { fetchMuseums } from '../actions/museumActions'
 
-
 class MuseumList extends Component {
 
   componentDidMount(){

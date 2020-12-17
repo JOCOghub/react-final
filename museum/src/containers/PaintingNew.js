@@ -8,9 +8,7 @@ export class PaintingNew extends Component {
     super(props);
 
     this.state = {
-      name: '',
-      age: '',
-      species: ''
+      name: ''
     }
   }
 
