@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-  class MuseumShow extends Component { //had an export at the beggining of this line b4
-    constructor(props) {
+export class MuseumShow extends Component {
+  constructor(props) {
     super(props);
 
     let paramsId = parseInt(this.props.match.params.id, 10)
@@ -11,7 +11,7 @@ import React, { Component } from 'react'
       museum: museum ? museum : { name: 'N/A'}
     }
   }
-
+//will need to add paintings functions components etc..
 
   render() {
     const { name } = this.state.museum;
