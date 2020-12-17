@@ -7,23 +7,23 @@ import MuseumList from './containers/MuseumList';
 
 class App extends Component {
 
-   constructor() {
-     super();
+  //  constructor() {
+  //    super();
 
-    this.state = {
-    id: 0,
-     museums: []
-    }
-   }
+  //   this.state = {
+  //   id: 0,
+  //    museums: []
+  //   }
+  //  }
 
-   addMuseum = museum => {
-    museum.id = this.state.id + 1;
+  //  addMuseum = museum => {
+  //   museum.id = this.state.id + 1;
 
-    this.setState({
-    museums: [...this.state.museums, museum],
-    id: this.state.id + 1
-    });
-  }
+  //   this.setState({
+  //   museums: [...this.state.museums, museum],
+  //   id: this.state.id + 1
+  //   });
+  // }
 
   render() {
     return (

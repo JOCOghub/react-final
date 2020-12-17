@@ -14,6 +14,7 @@ export class MuseumShow extends Component {
 //will need to add paintings functions components etc..
 
   render() {
+    console.log('Hits MuseumShow')
     const { name } = this.state.museum;
     return (
       <div>
