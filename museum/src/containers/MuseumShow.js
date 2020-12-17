@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
+import { fetchMuseums } from '../actions/museumActions'
+import { connect } from 'react-redux'
+
 
 export class MuseumShow extends Component {
-  constructor(props) {
-    super(props);
-
-    let paramsId = parseInt(this.props.match.params.id, 10)
-    let museum = props.museums.find( museum => museum.id === paramsId);
-
-    this.state = {
-      museum: museum ? museum : { name: 'N/A'}
-    }
+ 
+  componentDidMount(){
+    this.props.fetchMuseums()
   }
-//will need to add paintings functions components etc..
 
   render() {
-    console.log('Hits MuseumShow')
-    const { name } = this.state.museum;
+    let paramsId = parseInt(this.props.match.params.id, 10)
+    const { name } = this.props.museums.find( museum => museum.id === paramsId);
     return (
       <div>
         <h3>{ name }</h3>
@@ -23,5 +19,12 @@ export class MuseumShow extends Component {
     )
   }
 }
+  const mapStateToProps = state => {
+    return {
+      museums: state.museums
+    }
+  }
 
-export default MuseumShow
+export default connect(mapStateToProps, { fetchMuseums })(MuseumShow)
+
+

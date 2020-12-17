@@ -4,6 +4,7 @@ import Home from './containers/Home';
 import MuseumNew from './containers/MuseumNew';
 import NavBar from './components/NavBar';
 import MuseumList from './containers/MuseumList';
+import MuseumShow from './containers/MuseumShow';
 
 class App extends Component {
 
@@ -34,7 +35,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/museums/new" component={MuseumNew} />
             <Route exact path="/museums" component={MuseumList} />
-            {/* <Route exact path="/museums/:id" render={ props => <MuseumShow {...props} museums={ this.state.museums } />} /> */}
+            <Route exact path="/museums/:id" component={MuseumShow} />
           </Switch>
         </div>
       </Router>
