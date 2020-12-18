@@ -7,6 +7,7 @@ export class NavBar extends Component {
       <nav className="indigo darken-3">
         <div className="container">
           <ul className="right">
+            <li><NavLink to="/Top20">Top 20 Museums of the World</NavLink></li>
             <li><NavLink to="/">Home Page</NavLink></li>
             <li><NavLink to="/museums/new">Create New Museum</NavLink></li>
             <li><NavLink to="/museums">All museums</NavLink></li>

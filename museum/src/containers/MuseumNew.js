@@ -6,11 +6,11 @@ export class MuseumNew extends Component {
 
   constructor(props) {
     super(props);
-
+    
     this.state = {
       name: ''
     }
-  }
+  }             
 
   handleChange = event => {
     this.setState({
@@ -40,13 +40,5 @@ export class MuseumNew extends Component {
     )
   }
 }
-
-// const mapDispatchToProps = dispatch => {
-//   return{
-//     addMuseum: museum => dispatch(addMuseum(museum))
-//   }
-// }
-
-
 
 export default connect(null, { addMuseum })(MuseumNew)

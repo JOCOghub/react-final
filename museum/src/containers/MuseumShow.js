@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { fetchMuseums } from '../actions/museumActions'
 import { connect } from 'react-redux'
+import { PaintingNew } from './PaintingNew'
 
 
 export class MuseumShow extends Component {
@@ -15,6 +16,7 @@ export class MuseumShow extends Component {
     return (
       <div>
         <h3>{ name }</h3>
+        <PaintingNew/>
       </div>
     )
   }

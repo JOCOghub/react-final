@@ -29,7 +29,7 @@ export class PaintingNew extends Component {
   render() {
     return (
       <form onSubmit={ this.handleSubmit }>
-        <h3>Create painting</h3>
+        <h3>Add Exhibit</h3>
         <div className="input-field">
           <input type="text" name="name" id="name" value={ this.state.name } onChange={ this.handleChange }/>
           <label htmlFor="name">painting Name</label>
