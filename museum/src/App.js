@@ -10,24 +10,6 @@ import PaintingList from './containers/PaintingList'
 
 class App extends Component {
 
-  //  constructor() {
-  //    super();
-
-  //   this.state = {
-  //   id: 0,
-  //    museums: []
-  //   }
-  //  }
-
-  //  addMuseum = museum => {
-  //   museum.id = this.state.id + 1;
-
-  //   this.setState({
-  //   museums: [...this.state.museums, museum],
-  //   id: this.state.id + 1
-  //   });
-  // }
-
   render() {
     return (
       <Router>
@@ -39,7 +21,6 @@ class App extends Component {
             <Route exact path="/museums/new" component={MuseumNew} />
             <Route exact path="/museums" component={MuseumList} />
             <Route exact path="/museums/:id" component={MuseumShow} />
-            <Route exact path="/paintings" component={PaintingList} />
           </Switch>
         </div>
       </Router>
