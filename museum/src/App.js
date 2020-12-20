@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import MuseumList from './containers/MuseumList';
 import MuseumShow from './containers/MuseumShow';
 import Top20 from './components/Top20'
+import PaintingList from './containers/PaintingList'
 
 class App extends Component {
 
@@ -38,6 +39,7 @@ class App extends Component {
             <Route exact path="/museums/new" component={MuseumNew} />
             <Route exact path="/museums" component={MuseumList} />
             <Route exact path="/museums/:id" component={MuseumShow} />
+            <Route exact path="/paintings" component={PaintingList} />
           </Switch>
         </div>
       </Router>

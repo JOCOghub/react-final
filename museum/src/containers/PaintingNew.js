@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { addPainting } from '../actions/paintingActions'
 import { connect } from 'react-redux'
+//import PaintingList from './PaintingList'
 
 export class PaintingNew extends Component {
 
@@ -20,10 +21,8 @@ export class PaintingNew extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    // add the painting
-    this.props.addPainting( this.state );
-    // redirect to /paintings
-    this.props.history.push('/paintings');
+    this.props.addPainting( this.state, {museumId: this.props.museumId } );
+    // <PaintingList />
   }
 
   render() {
@@ -32,7 +31,7 @@ export class PaintingNew extends Component {
         <h3>Add Exhibit</h3>
         <div className="input-field">
           <input type="text" name="name" id="name" value={ this.state.name } onChange={ this.handleChange }/>
-          <label htmlFor="name">painting Name</label>
+          <label htmlFor="name">Exhibit Name</label>
         </div>
 
         <input type="submit" value="Create Painting" className="btn" /> 
@@ -40,13 +39,5 @@ export class PaintingNew extends Component {
     )
   }
 }
-
-// const mapDispatchToProps = dispatch => {
-//   return{
-//     addPainting: painting => dispatch(addPainting(painting))
-//   }
-// }
-
-
 
 export default connect(null, { addPainting })(PaintingNew)

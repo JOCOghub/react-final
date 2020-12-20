@@ -11,12 +11,21 @@ class PaintingList extends Component {
   }
 
   render() {
-    const paintings = this.props.paintings.map(( painting, i ) => <Painting key={i} painting={ painting } />)
+
+    const { paintings, museumId} = this.props;
+    const associatedPaintings = paintings.filter(painting => painting.museumId === museumId);
+    
+    const paintingList = associatedPaintings.map((painting) => {
+      return <Painting key={painting.id} painting={painting} />
+    })
+
+
+    //const paintings = this.props.paintings.map(( painting ) => <Painting key={painting.id} painting={ painting } />)
     return (
       <div>
         <h3>Painting List</h3>
         <ul className="collection">
-          { paintings }
+          { paintingList }
         </ul>
       </div>
     )

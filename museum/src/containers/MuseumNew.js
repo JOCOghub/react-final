@@ -20,9 +20,7 @@ export class MuseumNew extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    // add the museum
     this.props.addMuseum( this.state );
-    // redirect to /museums
     this.props.history.push('/museums');
   }
 

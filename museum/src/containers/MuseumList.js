@@ -8,7 +8,7 @@ class MuseumList extends Component {
   componentDidMount(){
     this.props.fetchMuseums()
   }
-                                                              
+                                                                  
   render() {
     const museums = this.props.museums.map(( museum ) => <Museum key={museum.id} museum={ museum } />)
     return (

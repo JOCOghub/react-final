@@ -13,13 +13,12 @@ export class MuseumShow extends Component {
 
   render() {
     let paramsId = parseInt(this.props.match.params.id, 10)
-    const { name } = this.props.museums.find( museum => museum.id === paramsId);//why is name a string and not a museum object
-    console.log(this.props.museums)          //^what is museum here??
+    const { name, id } = this.props.museums.find( museum => museum.id === paramsId);
     return (
       <div>
         <h3>{ name }</h3>
-        <PaintingNew      />
-        <PaintingList       />
+        <PaintingNew  museumId={id} /> 
+        <PaintingList museumId={id} /> 
       </div>
     )
   }

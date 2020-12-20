@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { removeMuseum } from '../actions/museumActions'
 import { Link } from 'react-router-dom'; 
-
+                //museum is passed in from MuseumList as a prop
 const Museum = ({ museum, removeMuseum }) => {
     return (
     <li className="collection-item">
