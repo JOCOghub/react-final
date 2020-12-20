@@ -8,9 +8,9 @@ class MuseumList extends Component {
   componentDidMount(){
     this.props.fetchMuseums()
   }
-
+                                                              
   render() {
-    const museums = this.props.museums.map(( museum, i ) => <Museum key={i} museum={ museum } />)
+    const museums = this.props.museums.map(( museum ) => <Museum key={museum.id} museum={ museum } />)
     return (
       <div>
         <h3>Museum List</h3>
@@ -24,7 +24,7 @@ class MuseumList extends Component {
 
 const mapStateToProps = state => {
   return {
-    museums: state.museums
+    museums: state.museums //state of the props?
   }
 }
 

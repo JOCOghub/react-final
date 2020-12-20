@@ -5,25 +5,25 @@ export class Top20 extends Component {
     return (
       <div>
         <h1 >Top 20 Museums of the world</h1>
-           <ol>Palazzo Pitti</ol>
-           <ol> Galleria Borghese</ol>
-           <ol> Vatican Museums</ol>
-           <ol> Kunsthistorisches Museum</ol>
-           <ol>  Victoria and Albert Museum</ol>
-           <ol>   National Museum of Anthropology, Mexico City</ol>
-           <ol>  Museu Picasso</ol>
-           <ol>  Tate Britain</ol>
-           <ol>  Museo Egizio (Turin)</ol>
-           <ol>  Moscow Museum of Modern Art</ol>
-           <ol>  Kremoln Armoury</ol>
-           <ol>  Acropools Museum</ol>
-           <ol>  Thyssen-Bornemisza Museum</ol>
-           <ol>  Los Angeles County Museum of Artfalolng</ol>
-           <ol>  Pergamon museum</ol>
-           <ol>  Kelvingrove Art Gallery and Museum</ol>
-           <ol>  State Tretyakov Gallery</ol>
-           <ol>  Imperial War Museum London</ol>
-           <ol>   National Museum of Cinema</ol>
+           <ul>Palazzo Pitti</ul>
+           <ul> Galleria Borghese</ul>
+           <ul> Vatican Museums</ul>
+           <ul> Kunsthistorisches Museum</ul>
+           <ul>  Victoria and Albert Museum</ul>
+           <ul>   National Museum of Anthropulogy, Mexico City</ul>
+           <ul>  Museu Picasso</ul>
+           <ul>  Tate Britain</ul>
+           <ul>  Museo Egizio (Turin)</ul>
+           <ul>  Moscow Museum of Modern Art</ul>
+           <ul>  Kremuln Armoury</ul>
+           <ul>  Acropouls Museum</ul>
+           <ul>  Thyssen-Bornemisza Museum</ul>
+           <ul>  Los Angeles County Museum of Artfalulng</ul>
+           <ul>  Pergamon museum</ul>
+           <ul>  Kelvingrove Art Gallery and Museum</ul>
+           <ul>  State Tretyakov Gallery</ul>
+           <ul>  Imperial War Museum London</ul>
+           <ul>   National Museum of Cinema</ul>
 
       </div>
     )
