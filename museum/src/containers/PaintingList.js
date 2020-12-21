@@ -3,7 +3,6 @@ import Painting from '../components/painting'
 import { connect } from 'react-redux'
 import { fetchPaintings } from '../actions/paintingActions'
 
-
 class PaintingList extends Component {
 
   componentDidMount(){
@@ -11,7 +10,6 @@ class PaintingList extends Component {
   }
 
   render() {
-
     const { paintings, museumId} = this.props;
     const associatedPaintings = paintings.filter(painting => painting.museumId === museumId);
     
@@ -19,11 +17,9 @@ class PaintingList extends Component {
       return <Painting key={painting.id} painting={painting} />
     })
 
-
-    //const paintings = this.props.paintings.map(( painting ) => <Painting key={painting.id} painting={ painting } />)
     return (
       <div>
-        <h3>Painting List</h3>
+        <h3>Exhibit List</h3>
         <ul className="collection">
           { paintingList }
         </ul>
@@ -37,7 +33,5 @@ const mapStateToProps = state => {
     paintings: state.paintings
   }
 }
-
-
 
 export default connect(mapStateToProps, { fetchPaintings })(PaintingList)

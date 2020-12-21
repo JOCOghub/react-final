@@ -1,22 +1,21 @@
 export const fetchPaintings = () => {
     return(dispatch) => {
-      return fetch('http://localhost:3000/paintings')
+      return fetch(`http://localhost:3000/paintings`)
       .then(resp => resp.json())
       .then(paintings => {
         dispatch({ type: "SET_PAINTINGS", payload: paintings })
       })
     }
   }
-  //add  thunk loading
   
-  export const addPainting = painting => {
+  export const addPainting = (painting, museumId) => {
     return(dispatch) => {
-      return fetch('http://localhost:3000/paintings', {
+      return fetch(`http://localhost:3000/museums/${museumId}/paintings`, { //HEEEEEERRRRRE
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({painting:painting})
+        body: JSON.stringify({painting:painting}, {museumId:museumId})//HEREEEEEEE
       })
       .then(resp => resp.json())
       .then(painting => {

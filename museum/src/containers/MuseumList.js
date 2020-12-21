@@ -24,7 +24,7 @@ class MuseumList extends Component {
 
 const mapStateToProps = state => {
   return {
-    museums: state.museums //state of the props?
+    museums: state.museums 
   }
 }
 

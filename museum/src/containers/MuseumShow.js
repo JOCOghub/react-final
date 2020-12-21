@@ -18,7 +18,7 @@ export class MuseumShow extends Component {
       <div>
         <h3>{ name }</h3>
         <PaintingNew  museumId={id} /> 
-        <PaintingList museumId={id} /> 
+        <PaintingList museumId={id} />  
       </div>
     )
   }
