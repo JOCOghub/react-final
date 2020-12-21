@@ -11,7 +11,7 @@ class PaintingList extends Component {
 
   render() {
     const { paintings, museumId} = this.props;
-    const associatedPaintings = paintings.filter(painting => painting.museumId === museumId);
+    const associatedPaintings = paintings.filter(painting => painting.museum_id === museumId);
     
     const paintingList = associatedPaintings.map((painting) => {
       return <Painting key={painting.id} painting={painting} />

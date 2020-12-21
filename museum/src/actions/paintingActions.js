@@ -9,13 +9,14 @@ export const fetchPaintings = () => {
   }
   
   export const addPainting = (painting, museumId) => {
+    const p = {painting: {name: painting.name, museum_id: museumId}}
     return(dispatch) => {
-      return fetch(`http://localhost:3000/museums/${museumId}/paintings`, { //HEEEEEERRRRRE
+      return fetch(`http://localhost:3000/museums/${museumId}/paintings`, { //HERE
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({painting:painting}, {museumId:museumId})//HEREEEEEEE
+        body: JSON.stringify(p)//HERE
       })
       .then(resp => resp.json())
       .then(painting => {

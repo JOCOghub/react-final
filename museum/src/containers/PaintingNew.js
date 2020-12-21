@@ -20,7 +20,8 @@ export class PaintingNew extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addPainting( this.state, {museumId: this.props.museumId });
+    this.props.addPainting( this.state,  this.props.museumId );
+
   }
  
   render() {
