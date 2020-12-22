@@ -9,9 +9,7 @@ export const fetchMuseums = () => {
   }
   
   export const addMuseum = museum => {
-    console.log('b')
     return(dispatch) => {
-      console.log('c')
       return fetch('http://localhost:3000/museums', {
         method: 'POST',
         headers: {
@@ -21,7 +19,6 @@ export const fetchMuseums = () => {
       })
       .then(resp => resp.json())
       .then(museum => {
-        console.log('d')
         dispatch({ type: "ADD_MUSEUM", payload: museum })
       })
      
