@@ -27,7 +27,7 @@ export class PaintingNew extends Component {
   render() {
     return (
       <form onSubmit={ this.handleSubmit }>
-        <h3>Add Exhibit</h3>
+        <h2>Add Exhibit</h2>
         <div className="input-field">
           <input type="text" name="name" id="name" value={ this.state.name } onChange={ this.handleChange }/>
           <label htmlFor="name">Exhibit Name</label>

@@ -27,13 +27,14 @@ export class MuseumNew extends Component {
   render() {
     return (
       <form onSubmit={ this.handleSubmit }>
-        <h3>Create museum</h3>
+        <h2>Create museum</h2>
         <div className="input-field">
           <input type="text" name="name" id="name" value={ this.state.name } onChange={ this.handleChange }/>
           <label htmlFor="name">museum Name</label>
         </div>
-
-        <input type="submit" value="Create Museum" className="btn" />
+         <div className='button'>
+          <input type="submit" value="Create Museum" className="btn" />
+        </div>
       </form>
     )
   }

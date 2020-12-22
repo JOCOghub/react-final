@@ -6,9 +6,79 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/08/14/47/belfry-2611575_1280.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-family: 'Apple chancery', cursive;
+  color:orange;
+  font-size: 50px;
+  font-family: 'Apple chancery', cursive;
+}
+
+p{
+  font-family: 'Apple chancery', cursive;
+  color: rgb(235, 10, 243);    
+  font-weight: 900;
+  font-size: 30px;
+  background-color: rgb(236, 232, 214);
+  margin-right: 400px;
+  margin-left: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Apple chancery', cursive;
+}
+
+ul {
+  list-style: decimal;
+}
+
+.right{
+  color: rgb(16, 39, 243);
+  font-size: 22px;
+  /* background-color: cornsilk;
+  margin-right: 800px;
+  margin-left: 50px; */
+}
+
+.collection{
+  color: rgb(16, 39, 243);
+  font-size: 22px;
+  background-color: cornsilk;
+  margin-right: 1000px;
+  margin-left: 50px;
+  font-family: 'Apple chancery', cursive;
+  /* display: flex;
+  justify-content: center; */
+}
+
+label{
+  font-weight: 200;
+  font-size: 22px;
+  background-color: cornsilk;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+h2{
+  color: rgb(27, 190, 212);
+  font-size: 60px;
+  font-family: 'Apple chancery', cursive;
+}
+
+h3{
+  color: rgb(197, 27, 212);
+  font-size: 60px;
+  font-family: 'Apple chancery', cursive;
 }
