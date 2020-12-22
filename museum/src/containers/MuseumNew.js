@@ -32,9 +32,7 @@ export class MuseumNew extends Component {
           <input type="text" name="name" id="name" value={ this.state.name } onChange={ this.handleChange }/>
           <label htmlFor="name">museum Name</label>
         </div>
-         <div className='button'>
           <input type="submit" value="Create Museum" className="btn" />
-        </div>
       </form>
     )
   }

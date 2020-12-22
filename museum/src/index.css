@@ -16,9 +16,15 @@ code {
     monospace;
 }
 
+.welcome{
+  display: flex;
+  justify-content: center;
+}
+
+
 h1 {
   font-family: 'Apple chancery', cursive;
-  color:orange;
+  color:rgb(255, 230, 0);
   font-size: 50px;
   font-family: 'Apple chancery', cursive;
 }
@@ -64,11 +70,6 @@ label{
   font-weight: 200;
   font-size: 22px;
   background-color: cornsilk;
-}
-
-.button{
-  display: flex;
-  justify-content: center;
 }
 
 h2{
