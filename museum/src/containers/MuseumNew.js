@@ -16,11 +16,14 @@ export class MuseumNew extends Component {
     this.setState({
       [event.target.name]: event.target.value
     })
+    
   }
 
   handleSubmit = event => {
     event.preventDefault();
+    console.log('a')
     this.props.addMuseum( this.state );
+    console.log('g')
     this.props.history.push('/museums');
   }
 
@@ -37,5 +40,6 @@ export class MuseumNew extends Component {
     )
   }
 }
+
 
 export default connect(null, { addMuseum })(MuseumNew)
